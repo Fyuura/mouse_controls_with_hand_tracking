@@ -7,7 +7,7 @@ import pyautogui
 import threading
 from queue import Queue
 import math
-import dotenv # 
+import dotenv # Remove this import and the code for it if not using external camera
 
 # Load camera URL from .env file, default to webcam if not provided
 dotenv.load_dotenv()
@@ -257,4 +257,5 @@ mouse_action_queue.put(None)  # Signal worker thread to stop
 mouse_thread.join(timeout=1)
 landmarker.close()
 cap.release()
+
 cv2.destroyAllWindows()
