@@ -7,7 +7,7 @@ import pyautogui
 import threading
 from queue import Queue
 import math
-# import dotenv # Remove this import and the code for it if not using IPWebcam
+# import dotenv # Remove this import if not using IPWebcam
 
 camera = 0  # Default to webcam
 
