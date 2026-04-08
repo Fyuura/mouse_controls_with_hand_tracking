@@ -7,13 +7,13 @@ import pyautogui
 import threading
 from queue import Queue
 import math
-import dotenv # Remove this import and the code for it if not using external camera
+# import dotenv # Remove this import and the code for it if not using IPWebcam
 
-# Load camera URL from .env file, default to webcam if not provided
-dotenv.load_dotenv()
-camera = dotenv.get_key(dotenv.find_dotenv(), "CAMERA_URL")
-if not camera:
-    camera = 0  # Default to webcam if no URL is provided
+camera = 0  # Default to webcam
+
+# Load camera URL from .env file
+# dotenv.load_dotenv()
+# camera = dotenv.get_key(dotenv.find_dotenv(), "CAMERA_URL")
 
 # Disable pyautogui failsafe and set pause to 0 for faster response
 pyautogui.FAILSAFE = False
